@@ -12,6 +12,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import SearchBar from "./SearchBar";
 
 export default function Navbarr() {
   const navItems = [
@@ -47,10 +48,20 @@ export default function Navbarr() {
     <div className="relative w-full">
       <Navbar>
         {/* Desktop Navigation */}
-        <NavBody>
+        <NavBody className="hidden lg:flex items-center justify-between gap-8">
+        {/* Left: logo + links */}
+        <div className="flex items-center gap-6">
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+        </div>
+
+            {/* MIDDLE SECTION: Search bar */}
+          <div className="hidden md:flex justify-center flex-grow max-w-md lg:max-w-lg xl:max-w-xl">
+            <SearchBar />
+          </div>
+
+          {/* RIGHT SECTION: Buttons */}
+          <div className="flex items-center gap-4 flex-shrink-0">
             <NavbarButton variant="primary">Sell A Car</NavbarButton>
             <NavbarButton variant="primary">Sign Up</NavbarButton>
           </div>
@@ -60,6 +71,10 @@ export default function Navbarr() {
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
+            {/* Mobile search bar */}
+            <div className="mt-1">
+              <SearchBar />
+            </div>
             <MobileNavToggle
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -80,6 +95,7 @@ export default function Navbarr() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
+
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
