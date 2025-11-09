@@ -8,7 +8,7 @@ const geistSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Auctions",
+  title: "BidAx",
   description: "Simplified auctions brought to you",
 };
 
