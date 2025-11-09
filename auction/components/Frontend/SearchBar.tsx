@@ -9,7 +9,7 @@ export default function SearchBar() {
   return (
     <div>
         <InputGroup>
-        <InputGroupInput placeholder="Search..." />
+        <InputGroupInput placeholder="Search for cars..." />
             <InputGroupAddon>
                 <Search />
             </InputGroupAddon>
