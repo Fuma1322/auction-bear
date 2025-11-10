@@ -248,7 +248,7 @@ export const NavbarLogo = () => {
         height={32}
         unoptimized
         />
-      <span className="font-bold text-black dark:text-white mb-1">BidAx</span>
+      <span className="font-bold text-brand-blue-500 dark:text-white mb-1">BidAx</span>
     </a>
   );
 };

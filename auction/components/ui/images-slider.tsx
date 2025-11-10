@@ -63,8 +63,7 @@ export const SplitCarousel = ({
   return (
     <div
       className={cn(
-        // ✅ Responsive layout: column on mobile, row on md+
-        "w-full flex flex-col md:flex-row gap-4 h-auto md:h-[32rem] relative overflow-hidden p-4 md:p-8",
+        "w-full flex flex-col md:flex-row gap-4 h-auto md:h-[30rem] relative overflow-hidden p-4 md:p-8",
         className
       )}
     >
