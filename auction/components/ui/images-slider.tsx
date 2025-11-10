@@ -29,7 +29,7 @@ export const SplitCarousel = ({
     setCurrentIndex((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1));
   };
 
-  // Keyboard and autoplay
+  // Keyboard + autoplay
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") handleNext();
@@ -37,7 +37,7 @@ export const SplitCarousel = ({
     };
     window.addEventListener("keydown", onKeyDown);
 
-    let auto: any;
+    let auto: NodeJS.Timeout | null = null;
     if (autoplay) {
       auto = setInterval(() => {
         handleNext();
@@ -46,7 +46,7 @@ export const SplitCarousel = ({
 
     return () => {
       window.removeEventListener("keydown", onKeyDown);
-      clearInterval(auto);
+      if (auto) clearInterval(auto);
     };
   }, [autoplay, interval]);
 
@@ -63,12 +63,13 @@ export const SplitCarousel = ({
   return (
     <div
       className={cn(
-        "w-full flex gap-4 h-[30rem] relative overflow-hidden p-12",
+        // ✅ Responsive layout: column on mobile, row on md+
+        "w-full flex flex-col md:flex-row gap-4 h-auto md:h-[32rem] relative overflow-hidden p-4 md:p-8",
         className
       )}
     >
-      {/* Left: Big Image */}
-      <div className="flex-1 relative">
+      {/* Left / Top: Big Image */}
+      <div className="w-full md:w-1/2 h-[18rem] md:h-full relative">
         <AnimatePresence mode="wait">
           <motion.img
             key={currentIndex + "-main"}
@@ -77,22 +78,30 @@ export const SplitCarousel = ({
             animate="animate"
             exit="exit"
             variants={slideVariants}
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-xl"
           />
         </AnimatePresence>
       </div>
 
-      {/* Right: 2x2 Grid */}
-      <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-2">
+      {/* Right / Bottom: 2x2 Grid */}
+      <div className="w-full md:w-1/2 grid grid-cols-2 grid-rows-2 gap-3 md:gap-4 mt-4 md:mt-0">
         {currentSlide.slice(1, 5).map((img, idx) => (
           <AnimatePresence mode="wait" key={idx}>
             <motion.img
               key={currentIndex + "-grid-" + idx}
               src={img}
               initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1, transition: { duration: 0.6 } }}
-              exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.5 } }}
-              className="w-full h-full object-cover rounded-lg"
+              animate={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.6 },
+              }}
+              exit={{
+                opacity: 0,
+                scale: 0.95,
+                transition: { duration: 0.5 },
+              }}
+              className="w-full h-[8rem] md:h-full object-cover rounded-xl"
             />
           </AnimatePresence>
         ))}
