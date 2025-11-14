@@ -16,7 +16,6 @@ export const SplitCarousel = ({
   slides,
   autoplay = true,
   interval = 5000,
-  direction = "up",
   className,
 }: SplitCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);

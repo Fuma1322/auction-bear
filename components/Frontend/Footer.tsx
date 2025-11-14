@@ -85,7 +85,7 @@ export default function Footer() {
                                  unoptimized
                                  />
                         <p className="leading-relaxed mt-2 text-[15px]">
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Lorem Ipsum has been the industry&aposs standard dummy text ever since the 1500s.
                         </p>
                     </div>
                     <form 
