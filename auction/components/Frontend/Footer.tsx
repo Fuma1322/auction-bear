@@ -73,12 +73,40 @@ export default function Footer() {
     ]
 
   return (
-     <footer className="text-neutral-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+     <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
             <div className="gap-6 justify-between md:flex">
                 <div className="flex-1">
-                    <div className="flex justify-start">
-                        <h1 className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance text-brand-blue-500 dark:text-white mb-1">BidAx</h1>
+                    <div className="max-w-xs">
+                         <Image
+                                 src="/logo.png"
+                                 alt="logo"
+                                 width={40}
+                                 height={40}
+                                 unoptimized
+                                 />
+                        <p className="leading-relaxed mt-2 text-[15px]">
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
                     </div>
+                    <form 
+                        onSubmit={(e) => e.preventDefault()}
+                    >
+                        <label className="block pt-4 pb-2">
+                            Stay up to date
+                        </label>
+                        <div className="max-w-sm flex items-center border rounded-md p-1">
+                            <input 
+                                type="email"
+                                placeholder="Enter your email"
+                                className="w-full p-2.5 outline-none"
+                            />
+                            <button
+                                className="p-2.5 rounded-md text-white bg-brand-blue-500 outline-none shadow-md focus:shadow-none sm:px-5"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
                     {

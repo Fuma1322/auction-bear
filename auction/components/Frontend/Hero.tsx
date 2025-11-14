@@ -48,7 +48,7 @@ export default function Hero() {
       id: "4",
       location: "Audi RS3",
       price: "780,000",
-      image: "/rs3.jpg",
+      image: "/RS.jpg",
       landlord: { name: "Musa", email: "", role: "" },
     },
     {
