@@ -1,9 +1,9 @@
 "use client"
 
 import React from "react";
+import { cn } from "@/lib/utils";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import { cn } from "@/lib/utils";
 import {
   IconBrandGithub,
   IconBrandGoogle,
