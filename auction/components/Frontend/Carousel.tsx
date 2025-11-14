@@ -13,13 +13,12 @@ export default function CarouselDemo() {
       "/a-46.jpg", // grid4
     ],
     [
-      "/a-45.jpg",
-      "/a-48.jpg",
-      "/a-47.jpg",
-      "/a-49.jpg",
-      "/a-46.jpg",
+      "/n5.jpg",
+      "/n2.jpg",
+      "/n3.jpg",
+      "/n4.jpg",
+      "/n1.jpg",
     ],
-    // add more slides...
   ];
 
   return <SplitCarousel slides={slides} autoplay interval={4000} />;
