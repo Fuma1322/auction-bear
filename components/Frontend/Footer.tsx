@@ -11,19 +11,19 @@ export default function Footer() {
             label: "How It Works",
             items: [
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Buying a car'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Selling a car'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Finalizing the Sale'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'FAQs'
                 },
             ],
@@ -32,19 +32,19 @@ export default function Footer() {
             label: "Sellers",
             items: [
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Submit Your Car'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Dashboard'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Certified Sellers'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Inspections'
                 },
             ],
@@ -53,19 +53,19 @@ export default function Footer() {
             label: "About",
             items: [
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Terms'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'License'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'Privacy'
                 },
                 {
-                    href: 'javascript:void()',
+                    href: '/',
                     name: 'About US'
                 },
             ]
@@ -143,25 +143,25 @@ export default function Footer() {
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="javascript:void()">
+                            <a href="/">
                                 <Facebook className='text-blue-700' />
                             </a>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="javascript:void()">
+                            <a href="/">
                                 <Instagram className='text-pink-500'/>
                             </a>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="javascript:void()">
+                            <a href="/">
                                 <Linkedin className='text-blue-500' />
                             </a>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="javascript:void()">
+                            <a href="/">
                                 <Youtube className='text-red-500' />
                             </a>
                         </li>

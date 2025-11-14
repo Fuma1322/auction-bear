@@ -8,7 +8,6 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import Image from "next/image";
 
 import React, { useRef, useState } from "react";
 
@@ -207,7 +206,6 @@ export const MobileNavMenu = ({
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.3 }}
           className={cn(
-            // ✅ fixed classes
             "flex flex-col w-full items-start gap-4 p-4 mt-2 rounded-lg bg-white/90 shadow-md dark:bg-neutral-900/90",
             className
           )}
@@ -239,13 +237,6 @@ export const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-1 px-2 py-2 text-xl text-black"
     >
-      <Image
-        src="/logo.png"
-        alt="logo"
-        width={32}
-        height={32}
-        unoptimized
-        />
       <span className="font-bold text-brand-blue-500 dark:text-white mb-1">BidAx</span>
     </a>
   );

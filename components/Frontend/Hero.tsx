@@ -96,15 +96,6 @@ export default function Hero() {
               </SelectContent>
             </Select>
 
-            {/* Transmission */}
-            <Select>
-              <SelectTrigger className="w-40">Transmission</SelectTrigger>
-              <SelectContent>
-                <SelectItem value="auto">Automatic</SelectItem>
-                <SelectItem value="manual">Manual</SelectItem>
-              </SelectContent>
-            </Select>
-
             {/* Body Style */}
             <Select>
               <SelectTrigger className="w-40">Body Style</SelectTrigger>
@@ -114,6 +105,16 @@ export default function Hero() {
                 <SelectItem value="hatchback">Hatchback</SelectItem>
               </SelectContent>
             </Select>
+
+            {/* Transmission */}
+            <Select>
+              <SelectTrigger className="w-40">Transmission</SelectTrigger>
+              <SelectContent>
+                <SelectItem value="auto">Automatic</SelectItem>
+                <SelectItem value="manual">Manual</SelectItem>
+              </SelectContent>
+            </Select>
+            
           </div>
         </div>
 

@@ -73,7 +73,7 @@ export default function Navbarr() {
           <MobileNavHeader>
             <NavbarLogo />
             {/* Mobile search bar */}
-            <div className="mt-1">
+            <div className="mt-1 mr-3">
               <SearchBar />
             </div>
             <MobileNavToggle
