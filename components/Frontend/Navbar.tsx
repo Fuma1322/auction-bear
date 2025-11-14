@@ -64,7 +64,7 @@ export default function Navbarr() {
           {/* RIGHT SECTION: Buttons */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <NavbarButton variant="primary">Sell A Car</NavbarButton>
-            <Link href="/login"><NavbarButton variant="primary">Sign Up</NavbarButton></Link>
+            <Link href="/register"><NavbarButton variant="primary">Sign Up</NavbarButton></Link>
           </div>
         </NavBody>
  
@@ -105,6 +105,7 @@ export default function Navbarr() {
               >
                 Sell a car
               </NavbarButton>
+              <Link href="/register">
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
@@ -112,6 +113,7 @@ export default function Navbarr() {
               >
                 Sign Up
               </NavbarButton>
+              </Link>
             </div>
           </MobileNavMenu>
         </MobileNav>
