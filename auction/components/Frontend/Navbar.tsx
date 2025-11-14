@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
+import Link from "next/link";
 
 export default function Navbarr() {
   const navItems = [
@@ -63,7 +64,7 @@ export default function Navbarr() {
           {/* RIGHT SECTION: Buttons */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <NavbarButton variant="primary">Sell A Car</NavbarButton>
-            <NavbarButton variant="primary">Sign Up</NavbarButton>
+            <Link href="/login"><NavbarButton variant="primary">Sign Up</NavbarButton></Link>
           </div>
         </NavBody>
  
