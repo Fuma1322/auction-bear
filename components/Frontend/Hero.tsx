@@ -124,7 +124,6 @@ export default function Hero() {
             <TabsTrigger value="near">Close to Me</TabsTrigger>
             <TabsTrigger value="popular">Most Popular</TabsTrigger>
             <TabsTrigger value="new">Newest</TabsTrigger>
-            <TabsTrigger value="price">Price (Low → High)</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
