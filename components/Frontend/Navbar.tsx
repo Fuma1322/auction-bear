@@ -18,10 +18,6 @@ import Link from "next/link";
 export default function Navbarr() {
   const navItems = [
     {
-      name: "Leaderboard",
-      link: "#leaderboard",
-    },
-    {
       name: "Auctions",
       link: "/auctions",
     },
