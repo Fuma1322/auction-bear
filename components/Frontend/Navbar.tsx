@@ -11,9 +11,9 @@ import {
   MobileNavHeader,
   MobileNavToggle,
 } from "@/components/ui/resizable-navbar";
+import Link from "next/link";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
-import Link from "next/link";
 
 export default function Navbarr() {
   const navItems = [
