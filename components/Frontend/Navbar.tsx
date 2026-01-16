@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
+import { Separator } from "../ui/separator";
 
 export default function Navbarr() {
   const navItems = [
@@ -113,6 +114,7 @@ export default function Navbarr() {
             </div>
           </MobileNavMenu>
         </MobileNav>
+        <Separator className="" />
       </Navbar>
     </div>
   );
