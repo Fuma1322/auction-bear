@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function VehicleDetails() {
   return (
     <div className="max-w-4xl space-y-12 mt-12">
@@ -116,6 +118,53 @@ export default function VehicleDetails() {
         </p>
       </section>
 
+      {/* VIDEO */}
+    <section className="space-y-6">
+    <h2 className="text-xl font-bold">Video</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="aspect-video w-full overflow-hidden rounded-md border">
+            <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            />
+            </div>
+
+            <div className="aspect-video w-full overflow-hidden rounded-md border">
+            <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            />
+            </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="rounded-md border p-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+            All Cars &amp; Bids auction listings are written based on information
+            provided by the seller during the submission process, and have been
+            reviewed by the seller for accuracy to the best of their abilities.
+            However, it is ultimately the bidder&apos;s responsibility to perform all
+            due diligence prior to placing a bid on any auction, including but not
+            limited to factual content, flaws, legality of registering in any given
+            state, emissions/safety compliance, and import eligibility. Please{" "}
+            <Link
+                href="#contact-seller"
+                className="font-medium hover:text-primary"
+            >
+                contact seller
+            </Link>{" "}
+            with any specific questions or requests.
+            </p>
+        </div>
+        </section>
     </div>
   );
 }
