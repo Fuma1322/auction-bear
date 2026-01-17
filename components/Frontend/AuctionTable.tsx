@@ -9,11 +9,11 @@ export default function AuctionTable() {
   const firstBlock = [
     ["Make", "Mercedes-Benz"],
     ["Model", "SLS AMG"],
-    ["Save", "Mileage"],
+    ["Mileage", "215,034"],
     ["VIN", "WDDRJ7HA6BA003322"],
     ["Title Status", "Clean (GA)"],
-    ["Location", "Marietta, GA 30060"],
-    ["Seller", "Dealer"],
+    ["Location", "Masowe 3"],
+    ["Seller", "Tankiso Fuma"],
   ];
 
   const secondBlock = [

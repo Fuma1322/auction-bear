@@ -3,6 +3,7 @@ import React from "react";
 import { Clock, Eye, Share2 } from "lucide-react";
 import { Button } from "../ui/button";
 import AuctionTable from "./AuctionTable";
+import VehicleDetails from "./VehicleDetails";
 
 export default function Auctions() {
   const slides = [
@@ -101,7 +102,7 @@ export default function Auctions() {
         <div
           className="
             fixed bottom-0 left-0 right-0 z-50
-            sm:static
+            sm:sticky sm:top-4
             bg-white sm:bg-transparent
             border-t sm:border-none
             shadow-lg sm:shadow-none
@@ -144,7 +145,7 @@ export default function Auctions() {
               {/* ENDING */}
               <div className="flex items-center gap-2 text-sm sm:text-md">
                 <span className="text-muted-foreground">Ending:</span>
-                <span className="font-semibold">Jan 20th at 1:30 PM EST</span>
+                <span className="font-semibold">Jan 20th 1:30 PM EST</span>
               </div>
 
             </div>
@@ -164,6 +165,7 @@ export default function Auctions() {
           </div>
         </div>
       <AuctionTable />
+      <VehicleDetails />
     </div>
   );
 }
