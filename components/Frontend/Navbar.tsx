@@ -114,7 +114,7 @@ export default function Navbarr() {
             </div>
           </MobileNavMenu>
         </MobileNav>
-        <Separator className="" />
+        <Separator />
       </Navbar>
     </div>
   );
