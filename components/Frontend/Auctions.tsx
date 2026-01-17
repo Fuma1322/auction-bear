@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { Badge, Clock, Eye, Share2 } from "lucide-react";
+import { Clock, Eye, Share2 } from "lucide-react";
 import { Button } from "../ui/button";
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { IconTrendingUp } from "@tabler/icons-react";
 import AuctionTable from "./AuctionTable";
 
 export default function Auctions() {
