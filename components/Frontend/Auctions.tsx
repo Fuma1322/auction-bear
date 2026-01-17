@@ -4,6 +4,7 @@ import { Badge, Clock, Eye, Share2 } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { IconTrendingUp } from "@tabler/icons-react";
+import AuctionTable from "./AuctionTable";
 
 export default function Auctions() {
   const slides = [
@@ -99,43 +100,72 @@ export default function Auctions() {
         );
       })}
       {/* BID TIME & BUTTON */}
-        <div className="flex items-center gap-4">
+        <div
+          className="
+            fixed bottom-0 left-0 right-0 z-50
+            sm:static
+            bg-white sm:bg-transparent
+            border-t sm:border-none
+            shadow-lg sm:shadow-none
+            px-4 py-3
+            pb-[env(safe-area-inset-bottom)]
+          "
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 sm:ml-2 max-w-screen-xl mx-auto">
 
-        {/* INFO BLOCK */}
-        <div className="flex items-center gap-8 rounded-xl bg-gray-200 px-8 py-3 w-[750px]">
-          
-          {/* TIME LEFT */}
-          <div className="flex items-center gap-2 text-md">
-            <Clock className="h-4 w-4 text-muted-foreground" />
-            <span className="text-muted-foreground">Time Left:</span>
-            <span className="font-semibold">3 Days</span>
+            {/* INFO BLOCK */}
+            <div
+              className="
+                flex flex-col gap-3
+                sm:flex-row sm:items-center sm:gap-8
+                rounded-xl bg-gray-200
+                px-4 sm:px-8 py-3
+                w-full sm:w-[750px]
+              "
+            >
+              
+              {/* TIME LEFT */}
+              <div className="flex items-center gap-2 text-sm sm:text-md">
+                <Clock className="h-4 w-4 text-muted-foreground" />
+                <span className="text-muted-foreground">Time Left:</span>
+                <span className="font-semibold">3 Days</span>
+              </div>
+
+              {/* HIGH BID */}
+              <div className="flex items-center gap-2 text-sm sm:text-md">
+                <span className="text-muted-foreground">High Bid:</span>
+                <span className="font-semibold">M160,000</span>
+              </div>
+
+              {/* BIDS */}
+              <div className="flex items-center gap-2 text-sm sm:text-md">
+                <span className="text-muted-foreground">Bids:</span>
+                <span className="font-semibold">10</span>
+              </div>
+
+              {/* ENDING */}
+              <div className="flex items-center gap-2 text-sm sm:text-md">
+                <span className="text-muted-foreground">Ending:</span>
+                <span className="font-semibold">Jan 20th at 1:30 PM EST</span>
+              </div>
+
+            </div>
+
+            {/* BID BUTTON */}
+            <Button
+              className="
+                w-full sm:w-auto
+                h-[44px] px-6
+                bg-green-600 hover:bg-green-700
+                text-white font-semibold rounded-xl
+              "
+            >
+              Place Bid
+            </Button>
+
           </div>
-
-          {/* HIGH BID */}
-          <div className="flex items-center gap-2 text-md">
-            <span className="text-muted-foreground">High Bid:</span>
-            <span className="font-semibold">M160,000</span>
-          </div>
-
-          {/* BIDS */}
-          <div className="flex items-center gap-2 text-md">
-            <span className="text-muted-foreground">Bids:</span>
-            <span className="font-semibold">10</span>
-          </div>
-
-          {/* Ending */}
-          <div className="flex items-center gap-2 text-md">
-            <span className="text-muted-foreground">Ending:</span>
-            <span className="font-semibold">Jan 20th 1:30 PM EST</span>
-          </div>
-
         </div>
-
-        {/* BID BUTTON */}
-        <Button className="h-[44px] px-6 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl">
-          Place Bid
-        </Button>
-      </div>
+      <AuctionTable />
     </div>
   );
 }
