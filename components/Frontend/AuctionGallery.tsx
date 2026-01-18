@@ -11,8 +11,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 type Category = "all" | "exterior" | "interior" | "mechanical" | "docs";
@@ -63,8 +61,6 @@ const GalleryContent = ({ category }: { category: Category }) => {
 
           {filtered.length > 1 && (
             <>
-              <CarouselPrevious />
-              <CarouselNext />
             </>
           )}
         </Carousel>
