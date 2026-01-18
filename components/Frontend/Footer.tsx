@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
 
@@ -121,13 +122,13 @@ export default function Footer() {
                                 {
                                     item.items.map(((el, idx) => (
                                         <li key={idx}>
-                                            <a 
+                                            <Link 
                                                 href={el.href}
                                                 className="hover:underline hover:text-indigo-600"
                                             
                                             >
                                                 { el.name }
-                                            </a>
+                                            </Link>
                                         </li>
                                     )))
                                 }
@@ -143,27 +144,27 @@ export default function Footer() {
                 <div className="mt-6 sm:mt-0">
                     <ul className="flex items-center space-x-4">
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="/">
+                            <Link href="/">
                                 <Facebook className='text-blue-700' />
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="/">
+                            <Link href="/">
                                 <Instagram className='text-pink-500'/>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="/">
+                            <Link href="/">
                                 <Linkedin className='text-blue-500' />
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                            <a href="/">
+                            <Link href="/">
                                 <Youtube className='text-red-500' />
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
