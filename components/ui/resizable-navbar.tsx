@@ -245,7 +245,6 @@ export const NavbarLogo = () => {
 
 export const NavbarButton = ({
   href,
-  as: Tag = "button",
   children,
   className,
   variant = "primary",
