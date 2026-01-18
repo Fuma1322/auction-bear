@@ -44,7 +44,7 @@ const GalleryContent = ({ category }: { category: Category }) => {
     <>
       {/* 📱 MOBILE — CAROUSEL */}
       <div className="block md:hidden">
-        <Carousel className="w-full max-w-sm mx-auto">
+        <Carousel className="w-full max-w-sm mx-auto p-2">
           <CarouselContent>
             {filtered.map((img, idx) => (
               <CarouselItem key={idx}>
