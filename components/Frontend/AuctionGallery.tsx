@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import * as React from "react";
 import Image from "next/image";
 import {
   Tabs,
@@ -12,10 +13,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 type Category = "all" | "exterior" | "interior" | "mechanical" | "docs";
 
-const images = [
+interface Artwork {
+  src: string;
+  category: Category;
+  label?: string;
+}
+
+const images: Artwork[] = [
   { src: "/a-45.jpg", category: "exterior" },
   { src: "/a-46.jpg", category: "exterior" },
   { src: "/a-47.jpg", category: "interior" },
@@ -42,7 +50,7 @@ const GalleryContent = ({ category }: { category: Category }) => {
     <>
       {/* 📱 MOBILE — CAROUSEL */}
       <div className="block md:hidden">
-        <Carousel className="w-full max-w-sm mx-auto p-2">
+        <Carousel className="w-full max-w-sm mx-auto">
           <CarouselContent>
             {filtered.map((img, idx) => (
               <CarouselItem key={idx}>
@@ -66,32 +74,33 @@ const GalleryContent = ({ category }: { category: Category }) => {
         </Carousel>
       </div>
 
-      {/* 🖥 DESKTOP — GRID */}
-      <div
-        className="
-          hidden md:grid
-          grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-          gap-4
-        "
-      >
-        {filtered.map((img, idx) => (
-          <div
-            key={idx}
-            className="relative aspect-square overflow-hidden rounded-lg bg-muted"
-          >
-            <Image
-              src={img.src}
-              alt={img.category}
-              fill
-              sizes="(max-width: 768px) 50vw,
-                     (max-width: 1024px) 33vw,
-                     25vw"
-              className="object-cover transition-transform duration-300 hover:scale-105"
-            />
+      {/* 🖥 DESKTOP — HORIZONTAL SCROLL */}
+      <div className="hidden md:block">
+        <ScrollArea className="w-full rounded-md border">
+          <div className="flex w-max space-x-4 p-4">
+            {filtered.map((img, idx) => (
+              <figure key={idx} className="shrink-0">
+                <div className="overflow-hidden rounded-md">
+                  <Image
+                    src={img.src}
+                    alt={img.category}
+                    width={300}
+                    height={400}
+                    className="
+                      aspect-[3/4]
+                      object-cover
+                      transition-transform
+                      duration-300
+                      hover:scale-105
+                    "
+                  />
+                </div>
+              </figure>
+            ))}
           </div>
-        ))}
+
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
       </div>
     </>
   );
@@ -128,23 +137,18 @@ export default function CarGallery() {
           </TabsTrigger>
         </TabsList>
 
-        {/* Content */}
         <TabsContent value="all">
           <GalleryContent category="all" />
         </TabsContent>
-
         <TabsContent value="exterior">
           <GalleryContent category="exterior" />
         </TabsContent>
-
         <TabsContent value="interior">
           <GalleryContent category="interior" />
         </TabsContent>
-
         <TabsContent value="mechanical">
           <GalleryContent category="mechanical" />
         </TabsContent>
-
         <TabsContent value="docs">
           <GalleryContent category="docs" />
         </TabsContent>
