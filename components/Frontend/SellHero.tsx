@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
+import { Box, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Testimonials from "./SellTestimonials";
 import HowItWorks from "./SellHIW";
