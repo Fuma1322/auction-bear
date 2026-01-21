@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:Fuma1322/auction-bear.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	gk-last-accessed = 2026-01-21T21:59:44.546Z
+	gk-last-modified = 2026-01-21T21:59:44.546Z
