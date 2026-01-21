@@ -12,7 +12,7 @@ export default function SellHero() {
     <section className="mt-24 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
       <div className="text-center space-y-6">
         {/* Heading */}
-        <h1 className="scroll-m-20 text-center text-7xl font-bold tracking-tight text-balance">
+        <h1 className="scroll-m-20 text-center text-6xl font-bold tracking-tight text-balance">
           Sell To
           <span className="text-brand-blue-500"> Enthusiasts. </span>{" "}
           Get What It&apos;s Worth
