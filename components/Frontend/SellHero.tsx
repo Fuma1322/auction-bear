@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import Testimonials from "./SellTestimonials";
 
 export default function SellHero() {
   return (
@@ -78,6 +79,7 @@ export default function SellHero() {
             />
             </ul>
       </div>
+      <Testimonials />
     </section>
   );
 }
