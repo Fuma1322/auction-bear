@@ -5,6 +5,7 @@ import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Testimonials from "./SellTestimonials";
 import HowItWorks from "./SellHIW";
+import FAQ from "./SellFAQ";
 
 export default function SellHero() {
   return (
@@ -82,6 +83,28 @@ export default function SellHero() {
       </div>
       <Testimonials />
       <HowItWorks />
+        <div className="flex items-center justify-center">
+            <Link
+            href="/sell"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              px-10
+              py-3.5
+              bg-brand-blue-500
+              text-white
+              font-semibold
+              rounded-md
+              shadow-md
+              hover:bg-gray-700
+              transition
+            "
+          >
+            Sell Now
+          </Link>
+        </div>
+      <FAQ />
     </section>
   );
 }
