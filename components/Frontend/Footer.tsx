@@ -16,7 +16,7 @@ export default function Footer() {
                     name: 'Buying a car'
                 },
                 {
-                    href: '/',
+                    href: '/landing',
                     name: 'Selling a car'
                 },
                 {
