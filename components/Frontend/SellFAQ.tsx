@@ -2,7 +2,6 @@
 
 import { useRef, useState } from "react"
 
-// ---------------- TYPES ----------------
 interface FaqItem {
   q: string
   a: string
@@ -13,7 +12,6 @@ interface FaqsCardProps {
   idx: number
 }
 
-// ---------------- FAQ CARD ----------------
 const FaqsCard = ({ item, idx }: FaqsCardProps) => {
   const answerElRef = useRef<HTMLDivElement | null>(null)
   const [open, setOpen] = useState(false)
@@ -57,7 +55,6 @@ const FaqsCard = ({ item, idx }: FaqsCardProps) => {
   )
 }
 
-// ---------------- MAIN FAQ COMPONENT ----------------
 export default function FAQ() {
   const faqsList: FaqItem[] = [
     {

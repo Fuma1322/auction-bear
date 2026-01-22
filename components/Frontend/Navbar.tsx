@@ -60,7 +60,7 @@ export default function Navbarr() {
 
           {/* RIGHT SECTION: Buttons */}
           <div className="flex items-center gap-4 flex-shrink-0">
-            <NavbarButton variant="primary" href="/sell">Sell A Car</NavbarButton>
+            <NavbarButton variant="primary" href="/landing">Sell A Car</NavbarButton>
             <NavbarButton variant="primary" href="register">Sign Up</NavbarButton>
           </div>
         </NavBody>
@@ -99,7 +99,7 @@ export default function Navbarr() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
-                href="/sell"
+                href="/landing"
               >
                 Sell a car
               </NavbarButton>

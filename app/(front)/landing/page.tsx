@@ -1,10 +1,10 @@
-import SellForm from '@/components/Frontend/SellForm'
+import SellHero from '@/components/Frontend/SellHero'
 import React from 'react'
 
 export default function page() {
   return (
     <div>
-      <SellForm />
+      <SellHero />
     </div>
   )
 }
