@@ -37,7 +37,7 @@ export default function Footer() {
                     name: 'Submit Your Car'
                 },
                 {
-                    href: '/',
+                    href: '/dashboard',
                     name: 'Dashboard'
                 },
                 {
