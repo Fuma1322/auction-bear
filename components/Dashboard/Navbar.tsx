@@ -1,7 +1,6 @@
 "use client"
 
 import React from 'react'
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,7 +26,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 
 export default function NavBar() {
-  const router = useRouter()
   const pathName = usePathname()
 
   // Sidebar links

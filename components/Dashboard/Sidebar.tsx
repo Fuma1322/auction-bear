@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const router = useRouter();
 
   // Sidebar links for ADMIN
   const sideBarLinks = [

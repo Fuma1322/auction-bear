@@ -51,7 +51,7 @@ export default function Testimonials () {
                                             </p>
                                         </blockquote>
                                         <div className="flex items-center gap-x-4 p-4 mt-6 bg-indigo-50">
-                                            <img src={item.avatar} className="w-16 h-16 rounded-full border-2 border-indigo-500" />
+                                            <img src={item.avatar} alt="image" className="w-16 h-16 rounded-full border-2 border-indigo-500" />
                                             <div>
                                                 <span className="block text-gray-800 font-semibold">{item.name}</span>
                                                 <span className="block text-indigo-600 text-sm mt-0.5">{item.title}</span>

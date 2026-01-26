@@ -28,27 +28,6 @@ export const SplitCarousel = ({
     setCurrentIndex((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1));
   };
 
-  // Keyboard + autoplay
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") handleNext();
-      else if (e.key === "ArrowLeft") handlePrevious();
-    };
-    window.addEventListener("keydown", onKeyDown);
-
-    let auto: NodeJS.Timeout | null = null;
-    if (autoplay) {
-      auto = setInterval(() => {
-        handleNext();
-      }, interval);
-    }
-
-    return () => {
-      window.removeEventListener("keydown", onKeyDown);
-      if (auto) clearInterval(auto);
-    };
-  }, [autoplay, interval]);
-
   if (!slides || slides.length === 0) return null;
 
   const currentSlide = slides[currentIndex];
