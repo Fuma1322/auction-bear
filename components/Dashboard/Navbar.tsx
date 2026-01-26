@@ -20,10 +20,9 @@ import {
   House,
   Zap
 } from "lucide-react"
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-
 
 export default function NavBar() {
   const pathName = usePathname()
@@ -36,6 +35,7 @@ export default function NavBar() {
     {title:"Live Auctions", path:"/dashboard", icon: Zap},
     {title:"Past Listing", path:"/dashboard/south", icon: Flag},
   ];
+
   return (
     <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
       <Sheet>

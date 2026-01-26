@@ -3,7 +3,7 @@
 import { Clipboard, Flag, House, LayoutGrid, Ship, Zap } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export default function Sidebar() {

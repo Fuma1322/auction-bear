@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "motion/react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface SplitCarouselProps {
@@ -14,19 +14,9 @@ interface SplitCarouselProps {
 
 export const SplitCarousel = ({
   slides,
-  autoplay = true,
-  interval = 5000,
   className,
 }: SplitCarouselProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1 >= slides.length ? 0 : prev + 1));
-  };
-
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 < 0 ? slides.length - 1 : prev - 1));
-  };
+  const [currentIndex] = useState(0);
 
   if (!slides || slides.length === 0) return null;
 
