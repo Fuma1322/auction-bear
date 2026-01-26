@@ -1,15 +1,19 @@
-"use client"
+import React, { ReactNode } from 'react';
+import NavBar from '@/components/Dashboard/Navbar';
+import Sidebar from '@/components/Dashboard/Sidebar';
 
-import React, { ReactNode } from 'react'
-import Navbarr from '@/components/Frontend/Navbar'
-import Footer from '@/components/Frontend/Footer'
+// Layout component for the dashboard
+export default async function Layout({ children }: { children: ReactNode }) {
 
-export default function Layout({children}: {children:ReactNode}) {
   return (
-     <div className='space-y-2.5 '>
-        {/* <Navbarr /> */}
-       {children}
-       {/* <Footer /> */}
+    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+      <Sidebar />
+      <div className="flex flex-col">
+        <NavBar />
+        <div className="p-8">
+          {children}
+        </div>
+      </div>
     </div>
-  )
+  );
 }

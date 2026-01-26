@@ -1,9 +1,6 @@
 import React from 'react'
+import { LoaderFive } from '../ui/loader';
 
 export default function SellersDashboard() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <LoaderFive text="Dashboard Loading..." />;
 }
