@@ -1,6 +1,6 @@
 "use client"
 
-import { Clipboard, Flag, House, LayoutGrid, Ship, Zap } from "lucide-react";
+import { CarFront, Clipboard, Flag, House, LayoutGrid, Ship, Zap } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
@@ -13,9 +13,9 @@ export default function Sidebar() {
   const sideBarLinks = [
     {title:"Home", path:"/", icon: House},
     {title:"Dashboard", path:"/", icon: LayoutGrid},
-    {title:"In Progress", path:"/dashboard", icon: Clipboard},
-    {title:"Live Auctions", path:"/dashboard/reserve", icon: Zap},
-    {title:"Past Listings", path:"/dashboard/south", icon: Flag},
+    {title:"In Progress", path:"/dashboard/progress", icon: Clipboard},
+    {title:"Live Auctions", path:"/dashboard/live", icon: Zap},
+    {title:"Past Listings", path:"/dashboard/past", icon: Flag},
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Sidebar() {
         {/* Header section with logo and notifications button */}
         <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
           <Link href="/" className="flex items-center gap-2 font-semibold">
-            <Ship className="text-brand-blue-500 h-5 w-5" />
+            <CarFront className="text-brand-blue-500 h-7 w-7" />
             <span>BidAx</span>
           </Link>
         </div>

@@ -31,9 +31,9 @@ export default function NavBar() {
   const sideBarLinks = [
     {title:"Home", path:"/", icon: House},
     {title:"Dashboard", path:"/dashboard", icon: LayoutGrid},
-    {title:"In Progress", path:"/dashboard", icon: Clipboard},
-    {title:"Live Auctions", path:"/dashboard", icon: Zap},
-    {title:"Past Listing", path:"/dashboard/south", icon: Flag},
+    {title:"In Progress", path:"/dashboard/progress", icon: Clipboard},
+    {title:"Live Auctions", path:"/dashboard/live", icon: Zap},
+    {title:"Past Listing", path:"/dashboard/past", icon: Flag},
   ];
 
   return (
