@@ -57,13 +57,13 @@ export default function Auctions() {
               className="grid grid-cols-1 md:grid-cols-3 gap-2 p-2"
             >
               {/* BIG LEFT IMAGE */}
-              <div className="md:col-span-2 h-[400px] overflow-hidden rounded-xl relative">
+              <div className="relative h-[400px] w-full md:col-span-2 overflow-hidden rounded-xl">
                 <Image
                   src={group[0]}
                   alt="Mercedes AMG A45"
                   fill
                   priority
-                  sizes="(max-width: 768px) 100vw, 66vw"
+                  sizes="(min-width: 768px) 66vw, 100vw"
                   className="object-cover"
                 />
               </div>
