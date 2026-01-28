@@ -1,18 +1,19 @@
-import Link from "next/link";
 import React from "react";
-import { Clock, Eye, Share2 } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from "../ui/button";
 import AuctionTable from "./AuctionTable";
 import VehicleDetails from "./VehicleDetails";
+import { Clock, Eye, Share2 } from "lucide-react";
 
 export default function Auctions() {
   const slides = [
     [
       "/a-45.jpg",
       "/a-48.jpg",
-      "/a-47.jpg",
+      "/cta01.jpeg",
       "/a-49.jpg",
-      "/a-46.jpg",
+      "/cta.jpeg",
     ],
   ];
 
@@ -47,57 +48,62 @@ export default function Auctions() {
       </div>
 
       {/* IMAGE COLLAGE */}
-      {slides.map((group, groupIndex) => {
-        const isLastGroup = groupIndex === slides.length - 1;
+        {slides.map((group, groupIndex) => {
+          const isLastGroup = groupIndex === slides.length - 1;
 
-        return (
-          <div
-            key={groupIndex}
-            className="grid grid-cols-1 md:grid-cols-3 gap-2 p-2"
-          >
-            {/* BIG LEFT IMAGE */}
-            <div className="md:col-span-2 h-[400px] overflow-hidden rounded-xl">
-              <img
-                src={group[0]}
-                alt="Mercedes AMG A45"
-                className="h-full w-full object-cover"
-              />
+          return (
+            <div
+              key={groupIndex}
+              className="grid grid-cols-1 md:grid-cols-3 gap-2 p-2"
+            >
+              {/* BIG LEFT IMAGE */}
+              <div className="md:col-span-2 h-[400px] overflow-hidden rounded-xl relative">
+                <Image
+                  src={group[0]}
+                  alt="Mercedes AMG A45"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  className="object-cover"
+                />
+              </div>
+
+              {/* RIGHT 4 IMAGES */}
+              <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[400px]">
+                {group.slice(1).map((src, idx) => {
+                  const isLastSmallImage = isLastGroup && idx === 3;
+
+                  return (
+                    <div
+                      key={idx}
+                      className="relative overflow-hidden rounded-xl"
+                    >
+                      <Image
+                        src={src}
+                        alt="Mercedes AMG A45"
+                        fill
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                        className="object-cover h-full w-full"
+                      />
+
+                      {/* CTA */}
+                      {isLastSmallImage && (
+                        <Link
+                          href="/gallery"
+                          className="absolute inset-0 flex items-center justify-center bg-black/40"
+                        >
+                          <span className="text-white text-xl font-semibold">
+                            View more
+                          </span>
+                        </Link>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-
-            {/* RIGHT 4 IMAGES */}
-            <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[400px]">
-              {group.slice(1).map((src, idx) => {
-                const isLastSmallImage = isLastGroup && idx === 3;
-
-                return (
-                  <div
-                    key={idx}
-                    className="relative overflow-hidden rounded-xl"
-                  >
-                    <img
-                      src={src}
-                      alt=""
-                      className="h-full w-full object-cover"
-                    />
-
-                    {/* CTA */}
-                    {isLastSmallImage && (
-                      <Link
-                        href="/gallery"
-                        className="absolute inset-0 flex items-center justify-center bg-black/40"
-                      >
-                        <span className="text-white text-xl font-semibold">
-                          View more
-                        </span>
-                      </Link>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
       {/* BID TIME & BUTTON */}
         <div
           className="

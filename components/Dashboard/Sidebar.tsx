@@ -1,10 +1,10 @@
 "use client"
 
-import { CarFront, Clipboard, Flag, House, LayoutGrid, Ship, Zap } from "lucide-react";
-import Link from "next/link";
 import React from "react";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import { CarFront, Clipboard, Flag, House, LayoutGrid, Zap } from "lucide-react";
 
 export default function Sidebar() {
   const pathname = usePathname();
